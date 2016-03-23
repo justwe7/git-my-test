@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+<script type="text/javascript">
+	/*
+		18，JavaScript中如何对一个对象进行深度clone
+	*/
+	
+	var json = {
+		name:'leo',
+		age:12,
+		arr:[1,2,3]
+	}
+	
+	function sdClone(json){
+		var o = json.constructor == Array?[]:{};
+		for(var attr in json){
+			if(typeof json[attr] == 'object' && json[attr]!=null){
+				o[attr] = sdClone(json[attr]);
+			}else{
+				o[attr] = json[attr];
+			}
+		}
+		return o;
+	}
+	
+	var obj2 = sdClone(json);
+	obj2.arr.push(4)
+	console.log(json);
+	
+	
+	
+</script>
+</body>
+</html>
