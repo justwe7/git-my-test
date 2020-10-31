@@ -5,6 +5,8 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 // cherry-pick B 改动
 
+// 其他提交导致master前推
+
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
