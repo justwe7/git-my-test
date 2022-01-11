@@ -4,20 +4,21 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-// mergea
+// mergea -- merge-b修改
 function fooBranchA (param) {
-  const obj = {
+  const objB = {
     a: 1,
     b: 2,
     c: 3
   }
-  for (const key in obj) {
-    if (Object.hasOwnProperty.call(obj, key)) {
-      const element = obj[key];
-      console.log(element)
+  for (const key in objB) {
+    console.log('merge-b')
+    if (Object.hasOwnProperty.call(objB, key)) {
+      const eleNew = objB[key];
+      console.log(eleNew)
     }
   }
-  console.log(obj)
+  console.log(objB)
 }
 
 new Vue({
