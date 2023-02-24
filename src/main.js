@@ -21,6 +21,9 @@ function fooBranchA (param) {
   console.log(objB)
 }
 // new rebase
+
+
+// new merge
 new Vue({
   router,
   render: h => h(App)
