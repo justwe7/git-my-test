@@ -4,7 +4,6 @@ import router from './router'
 
 Vue.config.productionTip = false
 // rebase1
-// rebase2
 // mergea -- merge-b修改
 function fooBranchA (param) {
   const objB = {
